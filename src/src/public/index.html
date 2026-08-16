@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CashFlow - Controle Financeiro</title>
+</head>
+<body>
+  <header>
+    <h1>CashFlow</h1>
+  </header>
+
+  <main>
+    <!-- Cards de Resumo -->
+    <section id="summary">
+      <div class="card">
+        <h3>Entradas</h3>
+        <p id="income-display">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h3>Saídas</h3>
+        <p id="expense-display">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h3>Saldo Total</h3>
+        <p id="total-display">R$ 0,00</p>
+      </div>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <section id="transaction-form">
+      <h2>Nova Transação</h2>
+      <form id="form">
+        <input type="text" id="description" placeholder="Descrição" required />
+        <input type="number" id="amount" step="0.01" placeholder="Valor (ex: 50.00)" required />
+        <select id="type">
+          <option value="income">Receita</option>
+          <option value="expense">Despesa</option>
+        </select>
+        <input type="text" id="category" placeholder="Categoria (ex: Alimentação)" required />
+        <input type="date" id="date" required />
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <!-- Tabela de Transações -->
+    <section id="transactions-list">
+      <h2>Histórico</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th>Categoria</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-table-body">
+          <!-- As linhas serão inseridas via TypeScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
